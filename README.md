@@ -21,14 +21,29 @@ Derive feature Revenue.
 #### Exploratory Analysis for Feature Selection
 Explore which of the features has the highest correlation with listing price.
 Explore categorical variables (value counts, count plots, swarm plots).
-Explore numeric variables (statistical analysis, boxplots, displots, violinplots, heatmap, joinplot). Visualise the bookings clusters with map of Seattle using _GeoPandas_ library and _Folium_ map.
+Explore numeric variables (statistical analysis, boxplots, displots, violinplots, heatmap, joinplot). 
+
+<img src="assets/1.PNG" width="280"> <img src="assets/2.PNG" width="280"> <img src="assets/3.PNG" width="280">
+
+<p align = "center"> <img src="assets/4.png" width="300"> <img src="assets/catplot.PNG" width="300"> </p> 
+
+<p align = "center"> <img src="assets/jointplot.PNG" width="200"> <img src="assets/heatmap.png" width="200"> </p>
+
+Visualise the bookings clusters with map of Seattle using _GeoPandas_ library and _Folium_ map.
+
+<p align="center"><img src="assets/geopandas.png" width="150"> <img src="assets/folium.png" width="230"> </p>
+
 #### Sentiment Analysis
 Clean textual data : Convert summary objects into strings. Ensure same capitalisation. Use regex to remove non alphanumeric characters and numbers. Remove stopwords (i, and, we etc) which are frequently occuring words that do not contribute to sentiment. Convert stemmed words to root words and lemmatize them. 
 
 Apply VADER sentiment intensity analyser to obtain compound VADER polarity scores, to identify words that strongest influence sentiment. 
 Generate heat maps for frequency of positive and negative words, with VADER polarity scores.
 
+<p align="center"><img src="assets/vadar.png" width="400"> </p>
+
 Visualise the top aggregated positive words used in summary using Text Cloud.
+
+<p align="center"> <img src="assets/textcloud1.png" width="270"> <img src="assets/textcloud2.png" width="90"> </p>
 
 #### Machine Learning
 Implement feature scaling. Attempt multivariate regression to predict listing price. Training approaches adopted are RandomForestRegressor and XGBRegressor (Boosted Trees). Evaluate model accuracy for both Train and Test data using _Mean Squared Error (MSE)_ and _R<sup>2</sup>_.
